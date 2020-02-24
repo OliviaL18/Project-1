@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Anton|Lobster|Pacifico|Passion+One&display=swap");
+body {
+  background-image: url("../images/inside-restaurant_60.jpg");
+  background-size: cover;
+  background-position: top center;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  font-size: 18px;
+}
+
+nav {
+  background: #D31027;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#EA384D), to(#D31027));
+  background: linear-gradient(to right, #EA384D, #D31027);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+nav li {
+  font-weight: bold;
+}
+
+.brand-logo {
+  margin-left: 15px;
+}
+
+h1, h2, h3, h4, th {
+  font-family: "Lobster", cursive;
+  margin: 15px 0;
+}
+
+.brand-logo {
+  font-family: "Lobster", cursive;
+}
+
+button.mycolor, a.mycolor {
+  background-color: #D31027;
+  font-weight: bold;
+}
+
+button.mycolor:hover, button.mycolor:active, button.mycolor:focus, a.mycolor:hover, a.mycolor:active, a.mycolor:focus {
+  background-color: #f25769;
+}
+
+.btn-choice {
+  text-transform: none;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.btn-block {
+  display: inline-block;
+}
+
+.meal-description, .cocktail-description {
+  font-size: larger;
+}
+
+.card.horizontal .card-image img {
+  max-width: 300px;
+}
+
+.modal:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 555px) {
+  a.brand-logo {
+    font-size: 16px;
+  }
+}
+
+.w3-responsive {
+  display: block;
+  overflow-x: auto;
+}
+
+.wrapper-shadow {
+  background-color: #ffffff;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 30px 15px 15px 15px;
+}
+/*# sourceMappingURL=style.css.map */

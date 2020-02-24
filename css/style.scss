@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Lobster|Pacifico|Passion+One&display=swap');
+
+$primary-color: #D31027; 
+$secondary-color: #D31027;
+$grey: #62727C;
+$light-grey:#ECE9E6;
+$light-color: #ffffff;
+$default-padding: 15px;
+$primary-font: 'Lobster', cursive;;
+
+body {
+    background-image: url('../images/inside-restaurant_60.jpg');
+    background-size: cover;
+    background-position: top center;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    font-size: 18px;
+}
+
+nav {
+    background: #D31027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EA384D, #D31027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    li {
+        font-weight: bold;
+    }
+}
+
+.brand-logo {
+    margin-left: $default-padding;
+}
+
+h1, h2, h3, h4, th {
+    font-family: $primary-font;
+    margin: $default-padding 0;
+}
+
+.brand-logo {
+    font-family: $primary-font;
+}
+
+button.mycolor, a.mycolor {
+    background-color: $primary-color;
+    font-weight: bold;
+    &:hover, &:active, &:focus {
+        background-color:lighten($primary-color, 20%);  
+    }
+}
+
+.btn-choice {
+    text-transform: none;
+    display: block;
+    margin-bottom: $default-padding;
+}
+
+.btn-block {
+    display: inline-block;
+}
+
+.meal-description, .cocktail-description {
+    font-size: larger;
+}
+
+.card.horizontal .card-image img {
+    max-width: 300px;
+}
+
+.modal:focus {
+    outline: none;
+}
+
+
+@media only screen and (max-width: 555px) {
+    a.brand-logo {
+        font-size: 16px;
+    }
+  }
+
+.w3-responsive {
+    display: block;
+    overflow-x: auto;
+}
+
+.wrapper-shadow {
+    background-color: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    padding: $default-padding * 2 $default-padding $default-padding $default-padding;
+}

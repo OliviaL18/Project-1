@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Super Eats | Generate Meal</title>
+
+  <!-- jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- FontAwesome Library -->
+  <script src="https://kit.fontawesome.com/b448568d58.js" crossorigin="anonymous"></script>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+</head>
+
+<body>
+  <!-- --------------------------------------------------
+  Navigation
+  --------------------------------------------------- -->
+  <nav class="mycolor">
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo">Super Eats</a>
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html">Generate Meals</a></li>
+        <li><a href="saved.html">Saved Meals</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Mobile Navigation -->
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="index.html">Generate Meals</a></li>
+    <li><a href="saved.html">Saved Meals</a></li>
+  </ul>
+
+
+  <div class="container">
+    <!-- --------------------------------------------------
+    Meal Planning Intro 
+    --------------------------------------------------- -->
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <h1 class="center-align">Generate A Meal</h1>
+        <p>An application to help you meal plan for any holiday. Click the "generate" button and see what combinations
+          you get! "Lock" a meal or cocktail to cycle through the other until you find your perfect match. Save your
+          combinations in local storage to return to the recipes at any time. </p>
+      </div>
+      <div class="col s12 m12 l12 center-align">
+        <button type="button" class="mycolor btn-large" id="generate">Generate Meals</button>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------
+    Meal Recipe Card  
+    --------------------------------------------------- -->
+    <!-- Meal Recipe Card Classes
+
+      Image     -   .meal-img
+      Title     -   .meal-title
+      Description - .meal-description
+      Ingidients -  .meal-ingredients
+      Steps     -   .meal-steps
+
+     -->
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="card horizontal">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator meal-img" src="https://via.placeholder.com/300x300">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <h2><i class="fas fa-utensils"></i> <span class="meal-title activator">Meal Title</span></h2>
+              <p class="meal-description">Aenean commodo ligula eget dolor. Aenean massa. Parturient montes, nascetur
+                ridiculus mus.</p>
+            </div>
+            <div class="card-action">
+              <button type="button" class="mycolor btn-large activator">View Recipe</button>
+              <button type="button" class="mycolor btn-large mlbutton"><i class="fas fa-unlock"
+                  id="lockMeal"></i></button>
+            </div>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title"><i class="material-icons right">close</i></span>
+            <h3>Ingredients</h3>
+            <ol class="meal-ingredients">
+            </ol>
+            <h3>Instructions</h3>
+            <p class="meal-steps">
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------
+    Cocktail Recipe Card  
+    --------------------------------------------------- -->
+    <!-- Cocktail Recipe Card Classes
+
+      Image     -   .cocktail-img
+      Title     -   .cocktail-title
+      Description - .cocktail-description
+      Ingredients - .cocktail-ingredients
+      Steps     -   .cocktail-steps
+
+     -->
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="card horizontal">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator cocktail-img" src="https://via.placeholder.com/300x300">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <h2><i class="fas fa-cocktail"></i> <span class="cocktail-title activator">Cocktail Title</span></h2>
+              <p class="cocktail-description">Aenean commodo ligula eget dolor. Aenean massa. Parturient montes,
+                nascetur ridiculus mus.</p>
+            </div>
+            <div class="card-action">
+              <button type="button" class="mycolor btn-large activator">View Recipe</button>
+
+              <button type="button" class="mycolor btn-large ctbutton"><i class="fas fa-unlock"
+                  id="lockCocktail"></i></button>
+
+            </div>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title"><i class="material-icons right">close</i></span>
+            <h3>Ingredients</h3>
+            <ol class="cocktail-ingredients">
+            </ol>
+            <h3>Instructions</h3>
+            <p class="cocktail-steps">
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------
+    Meal Planning Input & Save 
+    --------------------------------------------------- -->
+    <form>
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <div class="row wrapper-shadow">
+            <div class="col s12 m4 l4 input-field">
+              <input placeholder="Meal Name" id="meal-name" type="text" class="validate" max="100">
+              <label for="meal-name">Meal Name</label>
+            </div>
+            <div class="col s12 m4 l4 input-field">
+              <input type="text" class="datepicker" id="date-picker">
+              <label for="date-picker">Meal Date</label>
+            </div>
+            <div class="col s12 m4 l4">
+              <button type="submit" class="mycolor btn-large activator btn-block" id="saveMeal">Save Recipes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- --------------------------------------------------
+    Save Modal 
+    --------------------------------------------------- -->
+
+    <div id="savemodal" class="modal">
+      <div class="modal-content">
+        <h4>Your Meal Has Been Saved!</h4>
+        <p>And what a great meal it is. What would you like to do next?</p>
+        <button type="button" class="mycolor btn-large generate">Generate Another Meal</button>
+        <a class="mycolor btn-large" href="saved.html">View Saved Meals</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- --------------------------------------------------
+  Begin Scripts
+  --------------------------------------------------- -->
+
+  <!--  Scripts-->
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  <!-- LINK TO OLIVIA'S JAVASCRIPT HERE -->
+  <script src="js/storageScript.js"></script>
+
+  <!-- LINK TO BRENDAN'S JAVASCRIPT HERE -->
+  <script src="js/API.js"></script>
+
+  <!-- LINK TO NATHAN'S JAVASCRIPT HERE -->
+  <script src="js/button.js"></script>
+
+  <!-- LINK TO JEN'S JAVASCRIPT HERE -->
+  <script src="js/ui.js"></script>
+</body>
+
+</html>

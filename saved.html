@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Super Eats | Saved Meals</title>
+
+  <!-- jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- FontAwesome Library -->
+  <script src="https://kit.fontawesome.com/b448568d58.js" crossorigin="anonymous"></script>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+</head>
+
+<body>
+  <!-- --------------------------------------------------
+  Navigation
+  --------------------------------------------------- -->
+  <nav class="mycolor">
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo">Super Eats</a>
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html">Generate Meals</a></li>
+        <li><a href="saved.html">Saved Meals</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Mobile Navigation -->
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="index.html">Generate Meals</a></li>
+    <li><a href="saved.html">Saved Meals</a></li>
+  </ul>
+
+
+  <div class="container">
+    <!-- --------------------------------------------------
+    Meal Planning Intro 
+    --------------------------------------------------- -->
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <h1 class="center-align">Saved Meals</h1>
+      </div>
+    <div class="col s12 m12 l12">
+      <div class="card">
+        <div class="card-content">
+          <div class="w3-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Holiday Name</th>
+                  <th>Holiday Date</th>
+                  <th>Meal Recipe</th>
+                  <th>Cocktail Recipe</th>
+                  <th>View</th>
+                </tr>
+              </thead>
+              <tbody class="savedTable">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn-large mycolor btn-clear">Clear Recipes</button>
+    </div>
+  </div>
+
+    <!-- --------------------------------------------------
+    Save Modal 
+    --------------------------------------------------- -->
+    
+    <div id="mealmodal" class="modal">
+      <div class="modal-content">
+        <h2 class="eventName">Event Name</h2>
+        <p class="eventDate">Event Date</p>
+
+        <h3><i class="fas fa-utensils"></i> Meal: <span class="mealName"></span></h3>
+        <h4>Ingredients</h4>
+        <ol class="mealIngredients">
+        </ol>
+        <h4>Instructions</h4>
+        <p class="mealInstructions">
+        </p>
+
+        <h3><i class="fas fa-cocktail"></i> Cocktail: <span class="drinkName"></span></h3>
+        <h4>Ingredients</h4>
+        <ol class="drinkIngredients">
+        </ol>
+        <h4>Instructions</h4>
+          <p class="drinkInstructions">
+          </p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- --------------------------------------------------
+  Begin Scripts
+  --------------------------------------------------- -->
+
+  <!--  Scripts-->
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  <!-- LINK TO OLIVIA'S JAVASCRIPT HERE -->
+  <script src="js/storageScript.js"></script>
+
+  <!-- LINK TO BRENDAN'S JAVASCRIPT HERE -->
+  <script src="js/API.js"></script>
+
+  <!-- LINK TO NATHAN'S JAVASCRIPT HERE -->
+  <script src="js/button.js"></script>
+
+  <!-- LINK TO JEN'S JAVASCRIPT HERE -->
+  <script src="js/ui.js"></script>
+</body>
+
+</html>
