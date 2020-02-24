@@ -2,7 +2,7 @@
 An application to help you meal plan for any holiday. Click the "generate" button and see what combinations you get! "Lock" a meal or cocktail to cycle through the other until you find your perfect match. Save your combinations in local storage to return to the recipes at any time.
 
 ## Getting Started
-Visit this link to try it out - [https://nwsanfor24.github.io/holiday-meal-planner/](https://nwsanfor24.github.io/holiday-meal-planner//)
+Visit this link to try it out - [https://olivial18.github.io/Project-1/.](https://olivial18.github.io/Project-1/.)
 
 ## Built With
 * [Materialize](https://materializecss.com/) - The web framework used
